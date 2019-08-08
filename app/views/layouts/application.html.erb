@@ -9,6 +9,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </head>
 
   <body>
@@ -17,8 +19,6 @@
       <%= link_to "Let's Blend", new_cocktail_path %>
     </nav>
     <%= yield %>
-    <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
-    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
 
   </body>
 </html>

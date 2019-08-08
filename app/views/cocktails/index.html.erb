@@ -1,3 +1,11 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_url("citrus-fruit.jpg") %>);">
+  <div class="container">
+    <h1>Beach Bums' Best Beaverages</h1>
+    <p>Never to hot to drink and never too drunk to stop</p>
+  </div>
+</div>
+
+
 <ol>
 <% @cocktails.each do |cocktail| %>
   <li>
@@ -7,4 +15,3 @@
 
 </ol>
 
-<%= link_to "new", new_cocktail_path %>
