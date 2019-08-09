@@ -46,6 +46,13 @@
   font-size: 32px;
   font-weight: bold;
   margin: 0 auto;
+  display: inline-block;
+}
+
+.card-trip {
+  .fa-sad-cry {
+    margin-left: 12px;
+  }
 }
 
 .card-trip p {
