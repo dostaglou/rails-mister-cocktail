@@ -1,7 +1,11 @@
 <% options = ["love & care", "reckless abandon", "sugar, spice, and everything nice", "vengful rage", "an overwhelming sense of graditude", "humility and deference", "only G-d know's what"] %>
 
 <div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <% if @cocktail.photo.present? %>
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 300, crop: :fill %>
+  <% else %>
+  <p>There is no image here</p>
+<% end %>
   <div class="card-trip-infos">
     <div>
       <h2><%= @cocktail.name  %></h2>
