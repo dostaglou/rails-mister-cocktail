@@ -1,12 +1,15 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-<%= f.association :ingredient %>
-<%= f.input :description%>
-<%= f.button :submit %>
-<% end %>
+<div class="container-form">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.input :description%>
+  <div class="container-flex space-between">
+    <%= f.button :submit, class:"dbtn"%>
+    <%= link_to "return", cocktail_path(@cocktail), class:"btn dbtn" %>
+  </div>
+  <% end %>
 
-<%= link_to "return", cocktail_path(@cocktail) %>
+</div>
 
-<%= link_to "Home", cocktails_path %>
 
 
 

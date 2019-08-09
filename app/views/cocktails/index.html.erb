@@ -1,17 +1,20 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_url("citrus-fruit.jpg") %>);">
   <div class="container">
     <h1>Beach Bums' Best Beaverages</h1>
-    <p>Never to hot to drink and never too drunk to stop</p>
+    <p>Never too hot to drink and never too drunk to stop</p>
   </div>
 </div>
-
-
-<ol>
-<% @cocktails.each do |cocktail| %>
-  <li>
-    <%= cocktail.name %>
-  </li>
+<div id="index-form">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.label :name %>
+    <%= f.input_field :name, class:"index-input" %>
+    <%= f.button :submit, class:"index-btn" %>
   <% end %>
-
-</ol>
-
+</div>
+<div class="grid-container-index">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    </div>
+  <% end %>
+</div>
