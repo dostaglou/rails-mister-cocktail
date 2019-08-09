@@ -9,7 +9,7 @@
   <div class="card-trip-infos">
     <div>
       <h2><%= @cocktail.name  %></h2>
-      <p><%= "#{@cocktail.name} is made with #{options.sample}. Also:" %></p>
+      <p><%= "#{@name} is made with #{options.sample}. Also:" %></p>
       <% @doses.each do |dose| %>
         <p>
           <%= "#{dose.ingredient.name} @ #{dose.description}."%>

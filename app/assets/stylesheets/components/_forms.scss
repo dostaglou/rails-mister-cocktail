@@ -1,31 +1,25 @@
-#index-form {
-  display: flex;
-  max-width: 500px;
-  width: 90vw;
-  margin: 16px auto;
-  padding: 8px 8px;
-  border: 1px solid $gray;
-  border-radius: 5px;
-  background: beige;
-  justify-content: space-between;
+.dform-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    margin-top: 32px;
 
-  form {
-    background: yellow;
+  .dform {
     display: flex;
-  }
-  label {
-    padding: 4px 8px;
-    background-color: blue;
+    justify-content: center;
+
+  .top {
+    margin-top: 16px;
   }
 
-  input {
-    padding: 4px;
+  .bottom {
+    margin-top: 16px;
   }
-  .index-input {
-    flex-grow: 1;
-    background-color: green;
-  }
-  .index-btn {
-    background-color: blue;
-  }
+
+    input {
+      width: 350px;
+    }
+}
 }
