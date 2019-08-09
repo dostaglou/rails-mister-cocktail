@@ -1,13 +1,13 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_url("citrus-fruit.jpg") %>);">
   <div class="container">
-    <h1>Beach Bums' Best Beaverages</h1>
+    <h1>Beach Bum Beaverages</h1>
     <p>Never too hot to drink and never too drunk to stop</p>
   </div>
 </div>
 
 <div class="grid-container-index">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=cocktail.photo%>)">
     <%= link_to cocktail.name, cocktail_path(cocktail) %>
     </div>
   <% end %>

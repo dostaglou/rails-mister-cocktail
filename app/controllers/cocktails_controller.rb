@@ -9,7 +9,6 @@ class CocktailsController < ApplicationController
   def show
     @doses = @cocktail.doses
     @name = @cocktail.name.split(' ').map { |word| word.capitalize }.join(' ')
-
   end
 
   def new
